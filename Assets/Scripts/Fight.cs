@@ -12,31 +12,22 @@ public class Fight : MonoBehaviour
 
     public void Start()
     {
-        BeginFight();
+        
     }
     public void BeginFight() 
     {
         StartCoroutine(Combat());
-        /* _isFight = true;
-
-         while(_isFight) 
-         {
-             _player.TryAttak();
-             _player.TryProtection();
-
-             if(!_player.IsCanFight()) 
-             {
-                 _isFight = false;
-             }
-         }*/
     }
 
     private IEnumerator Combat() 
     {
-        _player.TryAttak();
-        _player.TryProtection();
-        
+        _player.ExecuteBattlePlan();
+
         yield return new WaitUntil(_player.CanChangeAnimation);
-        StartCoroutine(Combat());      
+
+        if(_player.IsCanFight()) 
+        {
+            StartCoroutine(Combat()); 
+        }      
     }
 }

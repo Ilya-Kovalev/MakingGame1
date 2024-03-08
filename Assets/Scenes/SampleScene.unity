@@ -905,6 +905,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7df524699deb44341b3693c8538df185, type: 3}
+--- !u!1 &535451566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 388476414, guid: 7df524699deb44341b3693c8538df185, type: 3}
+  m_PrefabInstance: {fileID: 531283762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &535451569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535451566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dee4e324de0a124fbdfcaa62ef452fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthBar: {fileID: 620047212}
+  _health: 8
 --- !u!1 &583080619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,9 +1674,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e168005a2d628b445b125e970ea3fd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthBar: {fileID: 891815074}
+  _health: 10
   _cube1: {fileID: 329597750}
   _cube2: {fileID: 697988532}
-  _playerBar: {fileID: 891815074}
   _strategyScale: {fileID: 1947721681}
 --- !u!114 &991232577
 MonoBehaviour:
@@ -2319,6 +2339,18 @@ MonoBehaviour:
         - m_Target: {fileID: 991232576}
           m_TargetAssemblyTypeName: Player, Assembly-CSharp
           m_MethodName: DistributePoints
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 991232577}
+          m_TargetAssemblyTypeName: Fight, Assembly-CSharp
+          m_MethodName: BeginFight
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
